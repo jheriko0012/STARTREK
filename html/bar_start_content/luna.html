@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La luna</title>
+    <link rel="stylesheet" href="/style/style_infromation_start/style_luna.css"/>
+    <link rel="stylesheet" href="/style/style_bar_start.css"/>
+    <link rel="stylesheet" href="/style/style_start.css"/>
+</head>
+<body>
+    <h1>Tierra y Luna</h1>
+    <div class="container">
+        <div class="earth"></div>
+        <div class="moon" onclick="showModal()"></div>
+    </div>
+    <nav class="navbar">
+        <div class="navbar-brand">Objetos cercanos a la Tierra</div>
+        <div class="nav-links icon">
+            <a class="nav-link" href="/html/sistema solar.html"><i class="fas fa-sun"></i>Distacia</a>
+            <a class="nav-link" href="/html/bar_start_content/luna.html"><i class="fas fa-moon"></i> Luna</a>
+            <a class="nav-link" href="/html/bar_start_content/asteroides.html"><i class="fas fa-gem"></i> Asteroides</a>
+            <a class="nav-link" href="/html/bar_start_content/satelites.html"><i class="fas fa-rocket"></i> Satélites</a>
+            <a class="nav-link" href="/index.html"><i class="fas fa-home"></i> Home</a>
+        </div>
+    </nav>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2>Información sobre la Luna</h2>
+            <p><strong>Distancia de la Tierra:</strong> Aproximadamente 384,400 km</p>
+            <p><strong>Diámetro:</strong> 3,474.8 km</p>
+            <p><strong>Masa:</strong> 7.349 × 10<sup>22</sup> kg</p>
+            <p><strong>Gravedad:</strong> 1.62 m/s²</p>
+            <p><strong>Temperatura:</strong> Mínima: -233°C, Máxima: 123°C</p>
+            <p><strong>Composición:</strong> La corteza lunar está compuesta principalmente de oxígeno, silicio, aluminio, calcio, hierro, magnesio, titanio, níquel, sodio, cromo, potasio, manganeso, azufre, fósforo, carbono, nitrógeno, hidrógeno y helio.</p>
+            <p><strong>Fases de la Luna:</strong> La Luna pasa por varias fases durante su órbita alrededor de la Tierra, incluyendo la luna nueva, cuarto creciente, luna llena y cuarto menguante.</p>
+            <p><strong>Exploración:</strong> La Luna es el único cuerpo celeste en el que el ser humano ha realizado un descenso tripulado. Las misiones Apolo de la NASA llevaron a 12 astronautas a la superficie lunar entre 1969 y 1972.</p>
+        </div>
+    </div>
+    <script src="/scripts/cripts_informstion_start/script_luna.js"></script>
+</body>
+</html>

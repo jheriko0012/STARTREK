@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroides, Cometas y Meteoros</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style/style_infromation_start/style_asteroides.css">
+</head>
+<body>
+    <header>
+        <h1>Asteroides, Cometas y Meteoros</h1>
+        <nav>
+            <a href="#asteroides">Asteroides</a>
+            <a href="#cometas">Cometas</a>
+            <a href="#meteoros">Meteoros</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="earth">
+            <img src="/images/earth.png" alt="Tierra">
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4" id="asteroides">
+                <div class="card">
+                    <img src="/images/cometas,asteroides,meteoro/asteroide.jpg" class="card-img-top" alt="Asteroide">
+                    <div class="card-body">
+                        <h5 class="card-title">Asteroide</h5>
+                        <p class="card-text">Cuerpos rocosos que orbitan alrededor del Sol.</p>
+                        <button class="btn btn-info" data-toggle="modal" data-target="#asteroidModal">Más información</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" id="cometas">
+                <div class="card">
+                    <img src="/images/cometas,asteroides,meteoro/cometa.jpg" class="card-img-top" alt="Cometa">
+                    <div class="card-body">
+                        <h5 class="card-title">Cometa</h5>
+                        <p class="card-text">Cuerpos de hielo y polvo que desarrollan una atmósfera brillante.</p>
+                        <button class="btn btn-info" data-toggle="modal" data-target="#cometModal">Más información</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" id="meteoros">
+                <div class="card">
+                    <img src="/images/cometas,asteroides,meteoro/cometa.jpg" class="card-img-top" alt="Meteorito">
+                    <div class="card-body">
+                        <h5 class="card-title">Meteorito</h5>
+                        <p class="card-text">Fragmentos de asteroides o cometas que producen una estela brillante al entrar en la atmósfera.</p>
+                        <button class="btn btn-info" data-toggle="modal" data-target="#meteorModal">Más información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales -->
+    <div class="modal fade" id="asteroidModal" tabindex="-1" role="dialog" aria-labelledby="asteroidModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="asteroidModalLabel">Más sobre los Asteroides</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Los asteroides son cuerpos rocosos que orbitan alrededor del Sol, principalmente en el cinturón de asteroides entre Marte y Júpiter.</p>
+                    <p><strong>Ejemplos notables:</strong></p>
+                    <ul>
+                        <li><strong>Ceres:</strong> El mayor asteroide, considerado un planeta enano.</li>
+                        <li><strong>Vesta:</strong> Uno de los más grandes con una superficie brillante.</li>
+                        <li><strong>Pallas:</strong> Contiene minerales y es de origen primitivo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cometModal" tabindex="-1" role="dialog" aria-labelledby="cometModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cometModalLabel">Más sobre los Cometas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Los cometas son cuerpos de hielo y polvo que, al acercarse al Sol, desarrollan una atmósfera brillante y una cola.</p>
+                    <p><strong>Ejemplos famosos:</strong></p>
+                    <ul>
+                        <li><strong>Cometa Halley:</strong> Visible desde la Tierra cada 76 años.</li>
+                        <li><strong>Cometa Hale-Bopp:</strong> Uno de los cometas más brillantes del siglo XX.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="meteorModal" tabindex="-1" role="dialog" aria-labelledby="meteorModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="meteorModalLabel">Más sobre los Meteoros</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Los meteoros son fragmentos de asteroides o cometas que entran en la atmósfera terrestre, produciendo una estela brillante.</p>
+                    <p><strong>Eventos notables:</strong></p>
+                    <ul>
+                        <li><strong>Perseidas:</strong> Lluvia de meteoros que ocurre cada agosto.</li>
+                        <li><strong>Gemínidas:</strong> Lluvia de meteoros visible en diciembre.</li>
+                        <li><strong>Leónidas:</strong> Conocida por su alta actividad cada 33 años.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/scripts/cripts_informstion_start/script_asteroide.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+/* CSS para la imagen zoom */
+.zoom {
+    transition: transform 0.2s; /* Animación suave para el zoom */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre la imagen */
+}
+
+.zoom:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
+}
+
+/* Estilos para el pie de página */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #343a40; /* Color oscuro de Bootstrap */
+    color: white; /* Color del texto */
+    position: relative; /* Posicionamiento relativo */
+    bottom: 0;
+    width: 100%;
+}

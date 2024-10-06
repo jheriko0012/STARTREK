@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="eS">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/style/style_home.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">STARS</div>
+        <div class="nav-links">
+            <a class="nav-link" href="/html/login/sig in/login.html"><i class="fas fa-sign-in-alt"></i>Iniciar sesion</a>
+            <a class="nav-link" href="/html/start.html"><i class="fas fa-home"></i>Inicio</a>
+            <a class="nav-link" href="/html/sistema solar.html"><i class="fas fa-globe"></i> Mapa sistema solar</a>
+            <!--<a class="nav-link" href="/html/game.html"><i class="fas fa-gamepad"> <br> GAME</i></a>-->
+            <a class="nav-link" href="/html/information.html"><i class="fas fa-info-circle"></i> Información</a>
+            <a class="nav-link" href="/html/comentario.html"><i class="fas fa-comment"></i> comentarios / Curiosidades </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="sun planet">
+            <img src="/images/sun.png" alt="sun">
+        </div>
+        <div class="mercury planet"></div>
+        <div class="venus planet"></div>
+        <div class="earth planet">
+            <div class="moon"></div>
+        </div>
+        <div class="mars planet"></div>
+        <div class="jupiter planet"></div>
+        <div class="saturn planet"></div>
+        <div class="uranus planet"></div>
+        <div class="neptune planet"></div>
+        <div class="pluto planet"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>

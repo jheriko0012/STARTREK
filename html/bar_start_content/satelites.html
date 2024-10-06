@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satélites Cercanos a la Tierra</title>
+    <link rel="stylesheet" href="/style/style_infromation_start/style_satelite.css">HUBBLE
+</head>
+<body>
+
+    <h1>Satélites Cercanos a la Tierra</h1>
+    <a class="nav-link button" href="/html/start.html"><i class="fas fa-sign-in-alt"></i> Salir</a>
+    <div class="earth-container">
+        <img src="/images/earth.png" alt="Earth" class="earth-image">
+        
+        <div class="orbit">
+            <div class="satellite" id="satellite1" onclick="showInfo('Hubble Space Telescope')">
+                <img src="/images/satelites/HUBBLE.jpeg" alt="Hubble" class="satellite-img">
+            </div>
+            <div class="satellite" id="satellite2" onclick="showInfo('Estación Espacial Internacional')">
+                <img src="/images/satelites/ISS.jpg" alt="ISS" class="satellite-img">
+            </div>
+            <div class="satellite" id="satellite3" onclick="showInfo('Satélite GPS')">
+                <img src="/images/satelites/GPS.jpeg" alt="GPS" class="satellite-img">
+            </div>
+            <div class="satellite" id="satellite4" onclick="showInfo('Satélite Meteorológico')">
+                <img src="/images/satelites/METEOROLOGICO.jpeg" alt="Weather Satellite" class="satellite-img">
+            </div>
+            <div class="satellite" id="satellite5" onclick="showInfo('Satélite Starlink')">
+                <img src="/images/satelites/STARLINK.jpeg" alt="Starlink" class="satellite-img">
+            </div>
+            <div class="satellite" id="satellite6" onclick="showInfo('Telescopio James Webb')">
+                <img src="/images/satelites/JAMES_WEBB.jpeg" alt="James Webb" class="satellite-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel de información -->
+    <div id="info-panel" class="info-panel">
+        <button id="close-info" onclick="closeInfo()">Cerrar</button>
+        <div id="satellite-info"></div>
+    </div>
+
+    <script src="/scripts/cripts_informstion_start/scrip_satelite.js"></script>
+</body>
+</html>

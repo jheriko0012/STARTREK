@@ -1,0 +1,566 @@
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+   }
+   
+   :root{
+    --z-s: 70vmin;
+    --bgi-galaxia: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/moving-through-stars-in-space_-1zccenlb__F0000.png');
+    --bgi-card: url('https://lh3.googleusercontent.com/K3UdS0t311DpKIiq614Ix6cRanFYxueEFaLF3T0bPQLGcJtqzw5ps3ClI85nK7jB4ElbKBs8xg=w640-h400-e365');
+    
+    --sol: url('/images/sun.png');
+    --sol2: url('/images/sun.png');
+    --mercurio: url('/images/mercury.png');
+    --venus: url('/images/venus.png');
+    --tierra: url('/images/earth.png');
+    --marte: url('/images/mars.png');
+    --jupiter: url('/images/jupiter.png');
+    --jupiter2: url('/images/jupiter.png');
+    --saturno: url('/images/saturn.png');
+    --urano: url('/images/uranus.png');
+    --urano2: url('/images/uranus.png');
+    --neptuno: url('/images/neptune.png');
+    --neptuno2: url('/images/neptune.png');
+    --pluton: url('/images/pluto.png');
+   }
+   
+   #btn-move{
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    display: block;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    color: gray;
+    font-size: 1.5em;
+    border-radius: 100%;  
+    background-color: black;
+   }
+
+   body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: var(--bgi-galaxia);
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+   }
+   
+   body::after{
+    content: "Preciona los planetas / Click the planets";
+    position: absolute;
+    bottom: .4rem;
+    left: .5rem;
+    padding: .3rem .5rem;
+    color: white;
+    background-color: #000;
+    text-transform: uppercase;
+    font: .5em sans-serif;
+   }
+   
+   .sistema-solar{
+    position: relative;
+    width: var(--z-s);
+    height: var(--z-s);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .content-objeto{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transform-origin: left;
+    left: 50%;
+    visibility: hidden;
+   }
+   .objeto{
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    visibility: visible;
+    cursor: pointer;
+   }
+   .objeto:hover{
+    outline: 1px solid #5559;
+   }
+   
+   .content-sol{
+    width: calc(var(--z-s) / 10);
+   }
+   .sol{
+    height: calc(var(--z-s) / 15);
+    width: calc(var(--z-s) / 15);
+    background-image: var(--sol);
+    background-size: 126%;
+    position: absolute;
+    z-index: 10;  
+   }
+
+   .content-mercurio{
+    width: calc(var(--z-s) / 10);
+   }
+   .mercurio{
+    width: calc(var(--z-s) / 38);
+    height: calc(var(--z-s) / 38);
+    background-image: var(--mercurio);
+   }
+   
+   .content-venus{
+    width: calc(var(--z-s) / 6.5);
+   }
+   .venus{
+    height: calc(var(--z-s) / 30);
+    width: calc(var(--z-s) / 30);
+    background-image: var(--venus);
+   }
+   
+   .content-tierra{
+    width: calc(var(--z-s) / 4.5);
+   }
+   .tierra{
+    height: calc(var(--z-s) / 23);
+    width: calc(var(--z-s) / 23);
+    background-image: var(--tierra);
+    background-size: cover;
+   }
+   
+   .content-marte{
+    width: calc(var(--z-s) / 3.49);
+   }
+   .marte{
+    height: calc(var(--z-s) / 25.5);
+    width: calc(var(--z-s) / 25.5);
+    background-image: var(--marte);
+    background-size: 110%;
+   }
+   
+   .content-jupiter{
+    width: calc(var(--z-s) / 2.5);
+   }
+   .jupiter{
+    width: calc(var(--z-s) / 11.5);
+    height: calc(var(--z-s) / 11.5);
+    background-image: var(--jupiter);
+    background-size: 110%;
+   }
+   
+   .content-saturno{
+    width: calc(var(--z-s) / 1.91);
+   }
+   .saturno{
+    width: calc(var(--z-s) / 15);
+    height: calc(var(--z-s) / 11.5);
+    background-image: var(--saturno);
+    background-size: 105%;
+    z-index: 100;
+   }
+   
+   .content-urano{
+    width: calc(var(--z-s) / 1.66);
+   }
+   .urano{
+    height: calc(var(--z-s) / 17);
+    width: calc(var(--z-s) / 17);
+    background-image: var(--urano);
+    background-size: 75%;
+   }
+   
+   .content-neptuno{
+    width: calc(var(--z-s) / 1.53);
+   }
+   .neptuno{
+    height: calc(var(--z-s) / 30);
+    width: calc(var(--z-s) / 30);
+    background-image: var(--neptuno);
+    background-size: 110%;
+   }
+   
+   .content-pluton{
+    width: calc(var(--z-s) / 1.43);
+   }
+   .pluton{
+    height: calc(var(--z-s) / 35);
+    width: calc(var(--z-s) / 35);
+    background-image: var(--pluton);
+   }
+  
+   .linea-guia{
+    position: absolute;
+    border-radius: 100%;
+    border: 1px dashed rgba(255,255,255,.15);
+    z-index: -20;
+   }
+   .linea-guia-1{  
+    width: calc(var(--z-s) / 6);
+    height: calc(var(--z-s) / 6);
+   }
+   .linea-guia-2{  
+    width: calc(var(--z-s) / 3.6);
+    height: calc(var(--z-s) / 3.6);
+   }
+   .linea-guia-3{  
+    width: calc(var(--z-s) / 2.5);
+    height: calc(var(--z-s) / 2.5);
+   }
+   .linea-guia-4{  
+    width: calc(var(--z-s) / 1.9);
+    height: calc(var(--z-s) / 1.9);
+   }
+   .linea-guia-5{  
+    width: calc(var(--z-s) / 1.4);
+    height: calc(var(--z-s) / 1.4);
+   }
+   .linea-guia-6{  
+    width: calc(var(--z-s) / 1.06);
+    height: calc(var(--z-s) / 1.06);
+   }
+   .linea-guia-7{  
+    width: calc(var(--z-s) / .87);
+    height: calc(var(--z-s) / .87);
+   }
+   .linea-guia-8{  
+    width: calc(var(--z-s) / .79);
+    height: calc(var(--z-s) / .79);
+   }
+   .linea-guia-9{  
+    width: calc(var(--z-s) / .73);
+    height: calc(var(--z-s) / .73);
+   }
+
+   #ccp{
+     display: none;
+   }
+   .cards-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    background-color: rgba(0,0,0,.6);
+   }
+   .content-card{
+     display: none;
+    position: absolute;
+    max-width: 280px;
+    min-height: 200px;
+    max-height: 500px;
+    flex-direction: column;
+    background-color: white;
+    overflow: auto;
+    animation: aparecer .2s ease-in-out
+   }
+   
+   @keyframes aparecer{
+    0%{
+      transform: scale(0)
+    }
+    100%{
+      transform: scale(1)
+    }
+   }
+   
+   .img-planeta{
+    height: 155px;
+    background-size: contain,cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box,border-box;
+    margin-bottom: .4rem;
+    padding: .7rem;
+    position: relative;
+   }
+   .title-planeta{
+    color: white;
+    font-family: calibri;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    padding-left: .3rem;
+    user-select: none;
+    background-color: rgb(255, 8, 8);
+    padding: .2rem .5rem;
+    border-radius: 1rem 0 0 1rem
+   }
+   
+   .info-planeta{
+    padding: .5rem 1rem;
+   }
+   .info-planeta p{
+    font-size: .9em;
+    text-align: justify;
+    line-height: 1.4;
+    color: hsl(0,0%,50%);
+    padding-left: .8rem;
+    position: relative;
+    font-family: 'Open Sans';
+    font-weight: 900;
+   }
+   .info-planeta p::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 6px;
+    background-color: #f00;
+    background-image:
+      linear-gradient(
+        #fc9201,
+        #d6723c,
+        #9f5f1b,
+        #2a376d,
+        #d55333,
+        #b48a5c,
+        #4480a3,
+        #4676fa,
+        #ecba95
+      );
+   }
+   
+   .caja-botones{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+   }
+   .caja-botones a,
+   .caja-botones .btn-planeta
+   {
+    text-decoration: none;
+    padding: .5rem .7rem;
+    font-size: .70em;
+    text-transform: uppercase;
+    background-color: dodgerblue;
+    font-family: 'Open Sans',sans-serif;
+    cursor: pointer;
+    transition: .2s;
+    font-weight: 900;
+    color: black;
+    user-select: none;
+    color: white;
+    border-radius: 1rem;
+   }
+   .caja-botones a:hover,
+   .caja-botones .btn-planeta:hover{
+    background-color: #06f;
+    color: white;
+   }
+   .caja-botones a:active,
+   .caja-botones .btn-planeta:active{
+    transform: scale(.9)
+   }
+   
+   .card-sol .img-planeta{
+    background-image: 
+      url('http://galacticmagazine.torodgn.com/viaje/images/elements/compartido/sol.png'),
+      var(--bgi-card);
+    background-size: 90%,cover;
+   }
+   
+   .card-mercurio .img-planeta{
+    background-image: 
+      var(--mercurio),
+      var(--bgi-card);
+   }
+   
+   .card-venus .img-planeta{
+    background-image: 
+      var(--venus),
+      var(--bgi-card);
+   }
+   
+   .card-tierra .img-planeta{
+    background-image: 
+      var(--tierra),
+      var(--bgi-card);
+   }
+   
+   .card-marte .img-planeta{
+    background-image: 
+      var(--marte),
+      var(--bgi-card);
+   }
+   
+   .card-jupiter .img-planeta{
+    background-image: 
+      var(--jupiter2),
+      var(--bgi-card);
+   }
+   
+   .card-saturno .img-planeta{
+    background-image: 
+      var(--saturno),
+      var(--bgi-card);
+   }
+   
+   .card-urano .img-planeta{
+    background-image: 
+      var(--urano2),
+      var(--bgi-card);
+   }
+   
+   .card-neptuno .img-planeta{
+    background-image: 
+      var(--neptuno2),
+      var(--bgi-card);
+   }
+   
+   .card-pluton .img-planeta{
+    background-image:
+      var(--pluton),
+      var(--bgi-card);
+   }
+   
+   .sol::before{content: "Sol"}
+   .mercurio::before{content: "Mercurio"}
+   .venus::before{content: "Venus";}
+   .tierra::before{content: "Tierra";}
+   .marte::before{content: "Marte";}
+   .jupiter::before{content: "Jupiter";}
+   .saturno::before{content: "Saturno";}
+   .urano::before{content: "Urano";}
+   .neptuno::before{content: "neptuno";} 
+   .pluton::before{content: "pluton"}
+   
+   .objeto::before{
+    position: absolute;
+    color: #fff;
+    font-family: monospace;  
+    right: 140%;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+    margin: auto;
+    padding: 0 .5rem .15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    transition: .5s;
+    animation: girar-pseudo 4s infinite linear;
+    background-color: #0008;
+   }
+   .mercurio::before,.venus::before{
+     right: auto;
+     left: 140%
+   }
+   .objeto:hover::before{
+    display: block;
+   }
+   
+   @keyframes girar-pseudo{
+    100%{transform: rotate(1turn)}
+   }
+   
+   .content-objeto{
+     animation: infinite linear both;
+     --dm: 10s;
+   }
+   .sol{
+     animation-duration: 1s;
+   }
+   .content-mercurio{  
+    animation-duration: calc(var(--dm) * 1);
+    animation-name: mercurio;
+   } 
+   .content-venus{
+    animation-duration: calc(var(--dm) * 1.1);
+    animation-name: venus;
+   }
+   .content-tierra{ 
+    animation-duration: calc(var(--dm) * 1.17);
+    animation-name: tierra; 
+   }
+   .content-marte{  
+    animation-duration: calc(var(--dm) * 1.25);
+    animation-name: marte;
+   }
+   .content-jupiter{
+    animation-duration: calc(var(--dm) * 1.35);
+    animation-name: jupiter;
+   }
+   .content-saturno{  
+    animation-duration: calc(var(--dm) * 1.43);
+    animation-name: saturno;
+   }
+   .content-urano{  
+    animation-duration: calc(var(--dm) * 1.49);
+    animation-name: urano;
+   }
+   .content-neptuno{  
+    animation-duration: calc(var(--dm) * 1.56);
+    animation-name: neptuno;
+   }
+   .content-pluton{  
+    animation-duration: calc(var(--dm) * 1.63);
+    animation-name: pluton;
+   }
+   .content-objeto{  
+    animation-play-state: paused;
+   }
+   
+   
+   @keyframes sol{
+     from{transform: rotate(0)}
+     to{transform: rotate(360deg)}
+    }
+    
+    @keyframes mercurio{
+     from{transform: rotate(-30deg);}
+     to{transform: rotate(330deg)}
+    }
+    
+    
+    @keyframes venus{
+     from{transform: rotate(60deg);}
+     to{transform: rotate(420deg)}
+    }
+    
+    @keyframes tierra{
+     from{transform: rotate(200deg)}
+     to{transform: rotate(560deg)}
+    }
+    
+    @keyframes marte{
+     from{transform: rotate(-100deg)}
+     to{transform: rotate(260deg)}
+    }
+    
+    @keyframes jupiter{
+     from{transform: rotate(130deg)}
+     to{transform: rotate(490deg)}
+    }
+    
+    @keyframes saturno{
+     from{transform: rotate(3);}
+     to{transform: rotate(360deg)}
+    }
+    
+    @keyframes urano{
+     from{transform: rotate(-55deg)}
+     to{transform: rotate(305deg)}
+    }
+    
+    @keyframes neptuno{
+     from{transform: rotate(220deg)}
+     to{transform: rotate(580deg)}
+    }
+    
+    @keyframes pluton{
+     from{transform: rotate(40deg)}
+     to{transform: rotate(400deg)}
+    }
+    
