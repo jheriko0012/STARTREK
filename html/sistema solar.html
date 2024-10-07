@@ -3,26 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comentarios</title>
-    <link rel="stylesheet" href="/style/comentario.css">
+    <title>Sistema Solar</title>
+    <link rel="stylesheet" href="/style/style_solar_system.css">
+    <style>
+        /* Estilos para el selector en la esquina inferior derecha */
+        #selector {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilos para la ventana de información en la esquina superior izquierda */
+        #info {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+    </style>
 </head>
 <body>
-
-    <h2>Comentarios y Curiosidades</h2>
-
-    <div class="comment-box">
-        <h3>Deja tu comentario:</h3>
-        <form class="comment-form" id="commentForm">
-            <textarea id="commentText" placeholder="Escribe tu comentario aquí..." required></textarea>
-            <button type="submit">Comentar</button>
-        </form>
+  <div class="container">
+    <div class="sun">
+      <img src="/images/sun.png" alt="sol">
     </div>
-
-    <div class="comment-section" id="commentSection">
-        <h3>Comentarios:</h3>
+    <div class="mercury"></div>
+    <div class="venus"></div>
+    <div class="earth">
+      <div class="moon"></div>
     </div>
+    <div class="mars"></div>
+    <div class="jupiter"></div>
+    <div class="saturn"></div>
+    <div class="uranus"></div>
+    <div class="neptune"></div>
+    <div class="pluto"></div>
+  </div>
 
-    <script src="/scripts/comentario.js"></script>
+  <!-- Selector de planetas en la esquina inferior derecha -->
+  <div id="selector">
+      <label for="planetas">Selecciona un planeta:</label>
+      <select id="planetas" onchange="mostrarDistancia()">
+          <option value="">--Seleccionar--</option>
+          <option value="Mercurio">Mercurio</option>
+          <option value="Venus">Venus</option>
+          <option value="Marte">Marte</option>
+          <option value="Júpiter">Júpiter</option>
+          <option value="Saturno">Saturno</option>
+          <option value="Urano">Urano</option>
+          <option value="Neptuno">Neptuno</option>
+      </select>
+  </div>
+
+  <!-- Ventana de información en la esquina superior izquierda -->
+  <div id="info"></div>
+
+  <script src="/scripts/solarsystem.js"></script>
+  <script src="/scripts/script.js"></script>
+  <script>
+      // Datos de distancia de los planetas a la Tierra (en millones de kilómetros)
+      const distancias = {
+          Mercurio: 77,
+          Venus: 41,
+          Marte: 78,
+          Júpiter: 628,
+          Saturno: 1275,
+          Urano: 2721,
+          Neptuno: 4351
+      };
+
+      function mostrarDistancia() {
+          const planeta = document.getElementById("planetas").value;
+          const infoDiv = document.getElementById("info");
+
+          if (planeta) {
+              infoDiv.style.display = "block";
+              infoDiv.innerHTML = Distancia de ${planeta} a la Tierra: ${distancias[planeta]} millones de km;
+          } else {
+              infoDiv.style.display = "none";
+          }
+      }
+  </script>
 
 </body>
 </html>
