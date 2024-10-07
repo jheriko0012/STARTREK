@@ -5,32 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Solar</title>
     <link rel="stylesheet" href="/style/style_solar_system.css">
-    <style>
-        /* Estilos para el selector en la esquina inferior derecha */
-        #selector {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #f1f1f1;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Estilos para la ventana de información en la esquina superior izquierda */
-        #info {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="/style/style_infromation_start/style_solarsystemdist.css">
+    <link rel="stylesheet" href="/style/salir.css">
 </head>
 <body>
+    <a class="nav-link button" href="/html/start.html"><i class="fas fa-sign-in-alt"></i> Salir</a>
   <div class="container">
     <div class="sun">
       <img src="/images/sun.png" alt="sol">
@@ -48,7 +27,6 @@
     <div class="pluto"></div>
   </div>
 
-  <!-- Selector de planetas en la esquina inferior derecha -->
   <div id="selector">
       <label for="planetas">Selecciona un planeta:</label>
       <select id="planetas" onchange="mostrarDistancia()">
@@ -63,35 +41,10 @@
       </select>
   </div>
 
-  <!-- Ventana de información en la esquina superior izquierda -->
   <div id="info"></div>
 
   <script src="/scripts/solarsystem.js"></script>
   <script src="/scripts/script.js"></script>
-  <script>
-      // Datos de distancia de los planetas a la Tierra (en millones de kilómetros)
-      const distancias = {
-          Mercurio: 77,
-          Venus: 41,
-          Marte: 78,
-          Júpiter: 628,
-          Saturno: 1275,
-          Urano: 2721,
-          Neptuno: 4351
-      };
-
-      function mostrarDistancia() {
-          const planeta = document.getElementById("planetas").value;
-          const infoDiv = document.getElementById("info");
-
-          if (planeta) {
-              infoDiv.style.display = "block";
-              infoDiv.innerHTML = Distancia de ${planeta} a la Tierra: ${distancias[planeta]} millones de km;
-          } else {
-              infoDiv.style.display = "none";
-          }
-      }
-  </script>
 
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 const distancias = {
     Mercurio: 77,
     Venus: 41,

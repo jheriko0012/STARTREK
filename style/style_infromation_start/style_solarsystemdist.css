@@ -18,7 +18,7 @@
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: rgba(0, 0, 255, 0.5); 
+    background-color: rgba(0, 0, 255, 0.5);
     color: #fff; 
     padding: 15px;
     border-radius: 8px;
@@ -27,4 +27,8 @@
     transition: opacity 0.5s ease-in-out;
 }
 
-
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+}
