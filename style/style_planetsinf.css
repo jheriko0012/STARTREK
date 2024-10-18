@@ -1,0 +1,150 @@
+*,html{
+	font-family:sans-serif;
+}
+
+
+.bg{
+	width:800px;
+	height:800px;
+	background:url("https://res.cloudinary.com/domenicarc/image/upload/v1512258475/Infogr%C3%A1fico%20Sistema%20Solar/Bg_mwrtef.svg");
+	overflow:hidden;
+}
+
+.sol{
+	background:url("images/sun.png");
+	width: 55%;
+    height: 55%;
+    margin:544px 0 0 -184px;
+}
+ 
+.mercurio{
+	background:url("https://res.cloudinary.com/domenicarc/image/upload/v1512258473/Infogr%C3%A1fico%20Sistema%20Solar/Mercurio_gjksin.svg");
+	margin:-400px 0 0 185px;
+}
+
+.venus{
+	background:url("https://res.cloudinary.com/domenicarc/image/upload/v1512258488/Infogr%C3%A1fico%20Sistema%20Solar/Venus_fbpcyh.svg");
+	
+	margin:-9px 0 0 290px;
+}
+
+.terra{
+	background:url("https://res.cloudinary.com/domenicarc/image/upload/v1512258481/Infogr%C3%A1fico%20Sistema%20Solar/Terra_rqf6qb.svg");
+	margin:-222px 0 0 291px;
+}
+
+.marte{
+	background:url("https://res.cloudinary.com/domenicarc/image/upload/v1512258471/Infogr%C3%A1fico%20Sistema%20Solar/Marte_anz5zb.svg");
+	margin:-280px 0 0 108px;
+}
+
+.jupiter{
+	background:url("https://res.cloudinary.com/domenicarc/image/upload/v1512258478/Infogr%C3%A1fico%20Sistema%20Solar/Jupiter_pg3jmn.svg");
+	margin:-27px 0 0 369px;
+	width: 15%;
+    height: 15%;
+}
+
+.saturno{
+	background:url("https://res.cloudinary.com/domenicarc/image/upload/v1512258481/Infogr%C3%A1fico%20Sistema%20Solar/Saturno_ahvnos.svg");
+	margin: -333px 0 0 230px;
+	width: 28%;
+    height: 23%;
+}
+
+.urano{
+	background:url("https://res.cloudinary.com/domenicarc/image/upload/v1512258483/Infogr%C3%A1fico%20Sistema%20Solar/Urano_czbiq9.svg");
+	margin: -76px 0 0 498px;
+    width: 16%;
+    height: 12%;
+}
+
+.netuno{
+	background:url("https://res.cloudinary.com/domenicarc/image/upload/v1512258473/Infogr%C3%A1fico%20Sistema%20Solar/Netuno_gtyc9r.svg");
+	margin:-161px 0 0 621px;
+}
+
+.plutao{
+	background:url("https://res.cloudinary.com/domenicarc/image/upload/v1512258476/Infogr%C3%A1fico%20Sistema%20Solar/Plutao_oh4avr.svg");
+	margin: -173px 0 0 682px;
+	width:5%;
+	height:5%;
+}
+
+.mercurio{
+	width:7%;
+	height:7%;
+}
+
+.venus,.marte{
+	width:8%;
+	height:8%;
+}
+
+.terra,.netuno{
+	width:9%;
+	height:10%;
+}
+
+.sistema-solar{
+	background-repeat:no-repeat;
+}
+
+.sistema-solar:hover{
+	cursor:pointer;
+}
+
+.sistema-solar:hover:before{
+	background: rgba(255,255,255,0.8);
+    line-height: 1.2em;
+    width: 300px;
+	padding: 6px;
+    border-radius: 10px;
+    position: absolute;
+    margin-left:60px;
+}
+
+.sol:hover:before{
+	content: "El Sol es la estrella central del Sistema Solar. Responsable del 99,86% de la masa del Sistema Solar, el Sol tiene una masa 332.900 veces mayor que la de la Tierra, y un volumen 1.300.000 veces mayor que el de nuestro planeta.";
+    margin:46px 0 0 295px;
+}
+
+.mercurio:hover:before{
+	content: "Mercurio es el planeta más pequeño y más cercano al Sol en el Sistema Solar, orbitando el Sol cada 87,969 días terrestres. Su órbita tiene la mayor excentricidad y su eje presenta la menor inclinación en relación al plano orbital entre todos los planetas del Sistema Solar. Mercurio completa tres rotaciones sobre su eje por cada dos órbitas.";
+    margin-left:40px;
+}
+
+.venus:hover:before{
+	content: "Venus es el segundo planeta del Sistema Solar en orden de distancia desde el Sol, orbitándolo cada 224,7 días. Recibió su nombre en honor a la diosa romana del amor y la belleza, Venus, equivalente a Afrodita.";
+}
+
+.terra:hover:before{
+	content: "La Tierra es el tercer planeta más cercano al Sol, el más denso y el quinto más grande de los ocho planetas del Sistema Solar. También es el mayor de los cuatro planetas telúricos. A veces es llamada el Mundo o el Planeta Azul. Hogar de millones de especies de seres vivos, incluida la humanidad, la Tierra es el único cuerpo celeste donde se conoce la existencia de vida.";
+}
+
+.marte:hover:before{
+	content: "Marte es el cuarto planeta desde el Sol y el segundo más pequeño del Sistema Solar. Nombrado en honor al dios romano de la guerra, a menudo se lo describe como el 'Planeta Rojo', debido al óxido de hierro predominante en su superficie, que le da un aspecto rojizo.";
+}
+
+.jupiter:hover:before{
+	content: "Júpiter es el planeta más grande del Sistema Solar, tanto en diámetro como en masa, y es el quinto más cercano al Sol. Posee menos de una milésima de la masa solar, pero tiene 2,5 veces la masa de todos los demás planetas juntos. Es un planeta gaseoso, junto con Saturno, Urano y Neptuno.";
+}
+
+.saturno:hover:before{
+	content: "Saturno es el sexto planeta desde el Sol y el segundo más grande del Sistema Solar, detrás de Júpiter. Pertenece al grupo de los gigantes gaseosos, con una masa de aproximadamente 95 veces la de la Tierra y orbita a una distancia media de 9,5 unidades astronómicas.";
+}
+
+.urano:hover:before{
+	content: "Urano es el séptimo planeta desde el Sol, el tercero más grande y el cuarto más masivo de los ocho planetas del Sistema Solar.";
+	margin-left:-300px;
+}
+
+.netuno:hover:before{
+	content: "Neptuno, perteneciente al grupo de los gigantes gaseosos, tiene un tamaño ligeramente menor que el de Urano, pero una masa mayor, equivalente a 17 masas terrestres. Neptuno orbita el Sol a una distancia media de 30,1 unidades astronómicas.";
+	margin-left:-300px;
+}
+
+.plutao:hover:before{
+	content: "Plutón, formalmente designado como '134340 Plutón', es un planeta enano del Sistema Solar y el noveno objeto más grande y décimo más masivo observado directamente orbitando el Sol. Originalmente clasificado como un planeta, Plutón es actualmente el mayor miembro conocido del cinturón de Kuiper, una región de cuerpos más allá de la órbita de Neptuno.";
+	margin-left:-300px;
+}
