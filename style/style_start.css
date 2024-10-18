@@ -9,20 +9,20 @@
     --bgi-galaxia: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/moving-through-stars-in-space_-1zccenlb__F0000.png');
     --bgi-card: url('https://lh3.googleusercontent.com/K3UdS0t311DpKIiq614Ix6cRanFYxueEFaLF3T0bPQLGcJtqzw5ps3ClI85nK7jB4ElbKBs8xg=w640-h400-e365');
     
-    --sol: url('/images/sun.png');
-    --sol2: url('/images/sun.png');
-    --mercurio: url('/images/mercury.png');
-    --venus: url('/images/venus.png');
-    --tierra: url('/images/earth.png');
-    --marte: url('/images/mars.png');
-    --jupiter: url('/images/jupiter.png');
-    --jupiter2: url('/images/jupiter.png');
-    --saturno: url('/images/saturn.png');
-    --urano: url('/images/uranus.png');
-    --urano2: url('/images/uranus.png');
-    --neptuno: url('/images/neptune.png');
-    --neptuno2: url('/images/neptune.png');
-    --pluton: url('/images/pluto.png');
+    --sol: url('images/sun.png');
+    --sol2: url('images/sun.png');
+    --mercurio: url('images/mercury.png');
+    --venus: url('images/venus.png');
+    --tierra: url('images/earth.png');
+    --marte: url('images/mars.png');
+    --jupiter: url('images/jupiter.png');
+    --jupiter2: url('images/jupiter.png');
+    --saturno: url('images/saturn.png');
+    --urano: url('images/uranus.png');
+    --urano2: url('images/uranus.png');
+    --neptuno: url('images/neptune.png');
+    --neptuno2: url('images/neptune.png');
+    --pluton: url('images/pluto.png');
    }
    
    #btn-move{
